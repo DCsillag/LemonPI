@@ -1,0 +1,38 @@
+.style-selector {
+  display: flex;
+  align-items: center;
+  font-size: 14px;
+}
+
+.style-selector label {
+  margin-right: 8px;
+  font-weight: 500;
+  color: #333;
+}
+
+.style-select {
+  padding: 4px 8px;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  background-color: white;
+  color: #333;
+  font-size: 14px;
+  cursor: pointer;
+  transition: border-color 0.3s ease;
+}
+
+.style-select:focus {
+  outline: none;
+  border-color: #F4CC01;
+}
+
+@media (max-width: 768px) {
+  .style-selector {
+    font-size: 12px;
+  }
+  
+  .style-select {
+    padding: 3px 6px;
+    font-size: 12px;
+  }
+} 

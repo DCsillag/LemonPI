@@ -1,0 +1,103 @@
+/* App layout styles */
+.app {
+  display: flex;
+  flex-direction: column;
+  min-height: 100%;
+}
+
+.main-content {
+  flex: 1;
+  padding: 20px 0;
+}
+
+/* Map container styles */
+.map-container {
+  height: 500px;
+  width: 100%;
+  border-radius: 8px;
+  overflow: hidden;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  margin-bottom: 30px;
+}
+
+/* Review card styles */
+.review-card {
+  background-color: white;
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  padding: 20px;
+  margin-bottom: 20px;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.review-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.1);
+}
+
+.review-card h3 {
+  color: #F4CC01;
+  margin-bottom: 10px;
+  font-family: 'Lemon', cursive;
+}
+
+.review-card .rating {
+  display: flex;
+  align-items: center;
+  margin-bottom: 10px;
+}
+
+.review-card .rating span.star {
+  color: #ddd;
+  font-size: 20px;
+  margin-right: 2px;
+}
+
+.review-card .rating span.star.filled {
+  color: #F4CC01;
+}
+
+.review-card .rating-text {
+  margin-left: 8px;
+  font-weight: 500;
+  color: #666;
+}
+
+.review-card .read-more {
+  color: #F4CC01;
+  font-weight: 500;
+}
+
+.review-card .read-more:hover {
+  color: #D4B001;
+}
+
+/* Custom marker popup styles */
+.leaflet-popup-content-wrapper {
+  border-radius: 8px;
+  padding: 5px;
+}
+
+.marker-popup {
+  text-align: center;
+}
+
+.marker-popup h4 {
+  margin: 0 0 5px;
+  color: #F4CC01;
+  font-family: 'Lemon', cursive;
+}
+
+.marker-popup p {
+  margin: 0;
+  font-size: 14px;
+}
+
+.marker-popup a {
+  color: #F4CC01;
+  font-weight: 500;
+}
+
+.marker-popup a:hover {
+  color: #D4B001;
+} 
