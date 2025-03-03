@@ -1,4 +1,4 @@
-# LemonPI
+# LemonPi
 
 A website for reviewing lemon tarts in Melbourne, hosted on a Raspberry Pi with Nginx.
 

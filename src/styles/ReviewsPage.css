@@ -1,10 +1,13 @@
 .reviews-page {
   padding: 20px 0;
+  text-align: center;
 }
 
 .reviews-header {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
   margin-bottom: 30px;
-  text-align: center;
 }
 
 .reviews-header h1 {
@@ -63,6 +66,7 @@
   max-width: 100%;
   display: flex;
   flex-direction: column;
+  text-align: left;
 }
 
 .reviews-list .review-card:hover {
@@ -115,4 +119,30 @@
   .reviews-list .review-card-image {
     height: 180px;
   }
+}
+
+.sort-and-add {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  margin-top: 20px;
+}
+
+.add-review-button {
+  background-color: #F4CC01;
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 4px;
+  font-size: 16px;
+  font-weight: 500;
+  cursor: pointer;
+  transition: background-color 0.2s ease;
+  text-decoration: none;
+  display: inline-flex;
+  align-items: center;
+}
+
+.add-review-button:hover {
+  background-color: #D4B001;
 } 

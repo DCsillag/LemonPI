@@ -10,7 +10,7 @@ const Header = () => {
       <div className="container header-container">
         <Link to="/" className="logo">
           <span className="logo-text">Lemon</span>
-          <span className="logo-pi">PI</span>
+          <span className="logo-pi">Pi</span>
         </Link>
         <nav className="nav">
           <ul className="nav-list">

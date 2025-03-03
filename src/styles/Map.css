@@ -5,12 +5,14 @@
 }
 
 .map-container {
-  height: 500px;
+  position: relative;
   width: 100%;
-  border-radius: 8px;
-  overflow: hidden;
-  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-  z-index: 1;
+  height: 500px;
+}
+
+.map {
+  width: 100%;
+  height: 100%;
 }
 
 .map-controls {
@@ -80,44 +82,69 @@
 
 /* Custom marker styles */
 .custom-marker {
-  background: none;
-  border: none;
+  text-align: center;
 }
 
-.marker-icon {
+.marker-content {
   width: 30px;
   height: 30px;
   display: flex;
-  justify-content: center;
   align-items: center;
-  border-radius: 50%;
-  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
-  position: relative;
-}
-
-.marker-icon::after {
-  content: '';
-  position: absolute;
-  bottom: -8px;
-  left: 50%;
-  transform: translateX(-50%);
-  width: 0;
-  height: 0;
-  border-left: 8px solid transparent;
-  border-right: 8px solid transparent;
-  border-top: 8px solid inherit;
-}
-
-.marker-text {
+  justify-content: center;
   color: white;
   font-weight: bold;
-  font-size: 12px;
+  border-radius: 50%;
+  background-color: #F4CC01;
+}
+
+.map-popup h3 {
+  color: #F4CC01;
+  margin-bottom: 8px;
+}
+
+.map-popup .rating {
+  margin-bottom: 8px;
+}
+
+.map-popup .star {
+  color: #ddd;
+}
+
+.map-popup .star.filled {
+  color: #F4CC01;
+}
+
+.map-popup .read-more {
+  color: #F4CC01;
+  text-decoration: none;
+  font-weight: 500;
+}
+
+.map-popup .read-more:hover {
+  text-decoration: underline;
+}
+
+.map-style-selector {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  z-index: 1000;
+}
+
+.style-select {
+  padding: 8px;
+  border-radius: 4px;
+  border: 1px solid #ddd;
+  background: white;
+  font-size: 14px;
 }
 
 /* Custom Leaflet overrides */
 .leaflet-container {
   font-family: 'Segoe UI', 'Roboto', 'Oxygen', 'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans',
     'Helvetica Neue', sans-serif;
+  width: 100%;
+  height: 100%;
 }
 
 .leaflet-popup-content-wrapper {

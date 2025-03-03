@@ -1,54 +1,48 @@
 import React, { useState, useEffect } from 'react';
+import { Link } from 'react-router-dom';
 import ReviewCard from '../components/ReviewCard';
-import reviewsData from '../data/reviews';
 import '../styles/ReviewsPage.css';
 
 const ReviewsPage = () => {
   const [reviews, setReviews] = useState([]);
-  const [sortBy, setSortBy] = useState('rating'); // Default sort by rating
+  const [sortBy, setSortBy] = useState('rating');
 
   useEffect(() => {
-    // In a real application, this would be an API call
-    // For now, we're using the static data
-    setReviews(reviewsData);
-  }, []);
+    // Fetch reviews from the server
+    fetch('http://localhost:3001/api/reviews')
+      .then(response => response.json())
+      .then(data => setReviews(data))
+      .catch(error => console.error('Error fetching reviews:', error));
+  }, []); // Empty dependency array means this runs once when component mounts
 
   const sortedReviews = [...reviews].sort((a, b) => {
     if (sortBy === 'rating') {
-      return b.rating - a.rating; // Sort by rating (highest first)
+      return b.rating - a.rating;
     } else if (sortBy === 'date') {
-      return new Date(b.date) - new Date(a.date); // Sort by date (newest first)
-    } else if (sortBy === 'name') {
-      return a.shopName.localeCompare(b.shopName); // Sort alphabetically
+      return new Date(b.date) - new Date(a.date);
     }
     return 0;
   });
 
-  const handleSortChange = (e) => {
-    setSortBy(e.target.value);
-  };
-
   return (
     <div className="reviews-page">
       <div className="container">
-        <section className="reviews-header">
-          <h1>Lemon Tart Reviews</h1>
-          <p>Discover our collection of the best lemon tarts across Melbourne.</p>
-          
-          <div className="sort-controls">
-            <label htmlFor="sort-select">Sort by:</label>
+        <h1>Reviews</h1>
+        <div className="reviews-header">
+          <div className="sort-and-add">
             <select 
-              id="sort-select" 
               value={sortBy} 
-              onChange={handleSortChange}
+              onChange={(e) => setSortBy(e.target.value)}
               className="sort-select"
             >
-              <option value="rating">Highest Rated</option>
-              <option value="date">Most Recent</option>
-              <option value="name">Shop Name</option>
+              <option value="date">Sort by Date</option>
+              <option value="rating">Sort by Rating</option>
             </select>
+            <Link to="/add-review" className="add-review-button">
+              Add Review
+            </Link>
           </div>
-        </section>
+        </div>
 
         <section className="reviews-list">
           {sortedReviews.map(review => (

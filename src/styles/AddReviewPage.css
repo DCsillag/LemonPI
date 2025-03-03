@@ -1,0 +1,152 @@
+.add-review-page {
+    padding: 40px 0;
+}
+
+.add-review-page h1 {
+    margin-bottom: 30px;
+    text-align: center;
+    color: #F4CC01;
+    font-family: 'Lemon', sans-serif; /* Matching your site's font */
+}
+
+.review-form {
+    width: 100%;
+    max-width: 900px;
+    margin: 0 auto;
+    background: white;
+    padding: 40px;  /* Increased padding */
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    box-sizing: border-box;
+}
+
+.form-group {
+    margin-bottom: 20px;
+    width: 100%;
+}
+
+.form-group label {
+    display: block;
+    margin-bottom: 8px;
+    font-weight: 500;
+    color: #333;
+}
+
+.form-group input,
+.form-group textarea {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    font-size: 16px;
+}
+
+.form-group textarea {
+    resize: vertical;
+    min-height: 120px;
+}
+
+.star-rating {
+    display: flex;
+    gap: 5px;
+    font-size: 24px;
+    cursor: pointer;
+}
+
+.star {
+    color: #ddd;
+    transition: color 0.2s ease;
+}
+
+.star.filled {
+    color: #F4CC01;
+}
+
+.submit-button {
+    background-color: #F4CC01;
+    color: white;
+    border: none;
+    padding: 12px 24px;
+    border-radius: 4px;
+    font-size: 16px;
+    font-weight: 500;
+    cursor: pointer;
+    transition: background-color 0.2s ease;
+}
+
+.submit-button:hover {
+    background-color: #D4B001;
+}
+
+.error-message {
+    background-color: #ffebee;
+    color: #c62828;
+    padding: 10px;
+    border-radius: 4px;
+    margin-bottom: 20px;
+}
+
+.image-preview {
+    margin-top: 10px;
+    max-width: 300px;
+}
+
+.image-preview img {
+    width: 100%;
+    height: auto;
+    border-radius: 4px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.coordinates-group {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    margin-bottom: 20px;
+    box-sizing: border-box;
+}
+
+.coordinate-input {
+    width: 48%;
+}
+
+.coordinate-input input {
+    width: 100%;
+    box-sizing: border-box;
+    padding: 10px 15px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    font-size: 18px;
+    font-family: monospace;
+    letter-spacing: 1px;
+    min-width: 300px;
+}
+
+.coordinate-input input:focus {
+    outline: none;
+    border-color: #F4CC01;
+    box-shadow: 0 0 0 2px rgba(244, 204, 1, 0.1);
+}
+
+/* Make the placeholder text more visible */
+.coordinate-input input::placeholder {
+    color: #999;
+}
+
+/* Update the helper text positioning */
+.coordinates-group::after {
+    content: "Tip: You can find coordinates by right-clicking a location on Google Maps";
+    display: block;
+    font-size: 12px;
+    color: #666;
+    margin-top: 5px;
+    width: 100%;
+    text-align: left;
+}
+
+/* Remove any max-width constraints from the container */
+.container {
+    width: 100%;
+    padding: 0 20px;
+    box-sizing: border-box;
+} 

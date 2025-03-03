@@ -2,6 +2,11 @@
   padding: 20px 0;
 }
 
+.hero-section {
+  text-align: center;
+  padding: 60px 0;
+}
+
 .hero {
   text-align: center;
   margin-bottom: 40px;
@@ -138,4 +143,10 @@
   .featured-grid .review-card-image {
     height: 200px;
   }
+}
+
+.map-section h2, 
+.featured-section h2 {
+  text-align: center;
+  margin-bottom: 30px;
 } 

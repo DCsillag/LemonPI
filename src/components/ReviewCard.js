@@ -29,7 +29,14 @@ const ReviewCard = ({ review }) => {
       {/* Add the image if it exists - now below the excerpt */}
       {review.image && (
         <div className="review-card-image">
-          <img src={review.image} alt={`Lemon tart from ${review.shopName}`} />
+          <img 
+            src={review.image} 
+            alt={review.shopName} 
+            onError={(e) => {
+              e.target.onerror = null; // Prevent infinite loop
+              e.target.src = '/placeholder-image.png'; // Add a placeholder image
+            }}
+          />
         </div>
       )}
       

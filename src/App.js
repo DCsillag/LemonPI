@@ -5,6 +5,7 @@ import Footer from './components/Footer';
 import HomePage from './pages/HomePage';
 import ReviewsPage from './pages/ReviewsPage';
 import ReviewPage from './pages/ReviewPage';
+import AddReviewPage from './pages/AddReviewPage';
 import './styles/App.css';
 
 function App() {
@@ -16,6 +17,7 @@ function App() {
           <Route path="/" element={<HomePage />} />
           <Route path="/reviews" element={<ReviewsPage />} />
           <Route path="/review/:id" element={<ReviewPage />} />
+          <Route path="/add-review" element={<AddReviewPage />} />
         </Routes>
       </main>
       <Footer />
